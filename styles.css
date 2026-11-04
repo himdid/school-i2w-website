@@ -1,0 +1,195 @@
+/* Base Page Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dbe2e6;
+  color: #162026;
+  line-height: 1.6;
+  padding: 16px;
+}
+
+/* Header & Navigation (Mobile-first: nav buttons stack vertically first) */
+header {
+  border-bottom: 2px solid #1b4348;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #1b4348;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #162026;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #1b4348;
+  background-color: #edf1f4;
+  padding: 8px 12px;
+  border: 1px solid #b7c4cc;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #1b4348;
+  color: #edf1f4;
+}
+
+/* Media & Content Cards (Responsive Sizing) */
+img, video {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 6px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card, article, section {
+  background-color: #edf1f4;
+  border: 1px solid #b7c4cc;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+/* Forms & Contact Page Elements */
+form {
+  background-color: #edf1f4;
+  border: 1px solid #b7c4cc;
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+fieldset {
+  border: 1px solid #b7c4cc;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+}
+
+legend {
+  font-weight: bold;
+  color: #1b4348;
+  padding: 0 6px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #b7c4cc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #fafbfc;
+  color: #162026;
+  margin-bottom: 8px;
+}
+
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+  background-color: #1b4348;
+  color: #edf1f4;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+
+input[type="reset"] {
+  background-color: #b7c4cc;
+  color: #162026;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 30px;
+  border-top: 1px solid #b7c4cc;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Switches navigation and card containers to horizontal rows */
+@media (min-width: 768px) {
+  body {
+    padding: 30px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  /* Make nav links sit side-by-side on larger screens */
+  nav ul {
+    flex-direction: row;
+  }
+
+  /* Make structured card containers sit side-by-side on desktop */
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-container .card {
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
