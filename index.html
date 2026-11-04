@@ -6,8 +6,9 @@
     <title>North Star Bakery | Home</title>
 </head>
 <body>
+    <!-- Site header and primary navigation -->
     <header>
-        <img src="bakery-logo.png" alt="North Star Bakery logo">
+        <img src="assets/images/bakery-logo_c.png" alt="North Star Bakery logo">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,41 +20,50 @@
     </header>
 
     <main>
-        <h1>Welcome to North Star Bakery</h1>
+        <!-- Single h1 for the page -->
+        <h1>North Star Bakery</h1>
         
+        <!-- Welcome section with embedded audio -->
         <section>
-            <h2>Freshly Baked for Our Community</h2>
-            <p>Welcome to your neighborhood corner bakery! Every morning before dawn, our ovens are fired up to bring you warm, handmade breads, flaky pastries, and artisanal baked goods crafted with local ingredients and care.</p>
+            <h2>Fresh Bread for the Neighborhood</h2>
+            <p>Welcome to North Star Bakery! We bake fresh bread, rolls, and morning pastries every day for our local community. Whether you need a quick coffee and roll on your morning commute or a loaf of sourdough for dinner, we have you covered.</p>
             
+            <!-- Audio welcome element with plain text fallback -->
             <audio controls>
-                <source src="bakery-welcome.mp3" type="audio/mpeg">
-                Your browser does not support the audio element. Listen to our head baker welcome you to North Star Bakery.
+                <source src="assets/audio/bakery-welcome-mixed_c.mp3" type="audio/mpeg">
+                Your browser does not support the audio player. Listen to a short welcome note from our head baker.
             </audio>
         </section>
 
+        <!-- Bakery summary section -->
         <section>
             <h2>What We're Known For</h2>
-            <p>We specialize in naturally leavened sourdough loaves, slow-fermented crusty baguettes, and delicate laminated morning buns. Made using time-honored traditional techniques with zero artificial preservatives.</p>
+            <p>We are known for our crusty sourdough bread, French baguettes, and morning sweet rolls. We make our dough from scratch every morning using simple ingredients without extra additives.</p>
         </section>
 
+        <!-- Featured item with responsive picture element -->
         <section>
             <h2>Featured Item of the Week</h2>
-            <p>Our Baker's Reserve Cardamom Morning Buns—rolled with stone-ground organic flour, infused with fresh crushed cardamom, and dusted in cane sugar.</p>
+            <p>This week we are featuring our Cardamom Morning Buns, baked fresh every morning and coated in raw sugar.</p>
+            
+            <!-- Responsive image using picture tag and media query -->
             <picture>
-                <source media="(min-width: 768px)" srcset="bakery-feature-large.jpg">
-                <img src="bakery-feature-small.jpg" alt="Featured bakery pastry fresh from the oven">
+                <source media="(min-width: 768px)" srcset="assets/images/bakery-feature-large_c.png">
+                <img src="assets/images/bakery-feature-large_c.png" alt="Fresh morning buns on a baking tray">
             </picture>
         </section>
 
+        <!-- Hours and location snippet -->
         <section>
-            <h2>Hours &amp; Location</h2>
+            <h2>Hours and Location</h2>
             <p><strong>Address:</strong> 142 Elm Street, Downtown Crossing</p>
-            <p><strong>Hours:</strong> Tuesday – Sunday: 6:30 AM – 2:00 PM (Closed Mondays)</p>
+            <p><strong>Hours:</strong> Tuesday - Sunday: 6:30 AM - 2:00 PM (Closed Mondays)</p>
         </section>
     </main>
 
+    <!-- Standard site footer -->
     <footer>
-        <p>&copy; 2026 North Star Bakery. All rights reserved.</p>
+        <p>&copy; 2026 North Star Bakery</p>
     </footer>
 </body>
 </html>
