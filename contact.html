@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Site header and navigation -->
@@ -44,20 +45,24 @@
             <h2>Order Request Form</h2>
             <p>Fill out the form below to reserve items for pickup or to ask a question about an upcoming event order.</p>
 
-            <!-- Form with fieldset, legend, labels, and built-in validation -->
-            <form action="#" method="post">
+            <!-- Success/error status box -->
+            <div id="form-feedback" class="status-message" aria-live="polite"></div>
+
+            <form id="order-form" action="#" method="post" novalidate>
                 <!-- Group 1: Contact Details -->
                 <fieldset>
                     <legend>Your Details</legend>
                     
                     <p>
                         <label for="name">Your Name:</label><br>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name">
+                        <span id="name-error" class="error-msg"></span>
                     </p>
 
                     <p>
                         <label for="email">Email Address:</label><br>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email">
+                        <span id="email-error" class="error-msg"></span>
                     </p>
                 </fieldset>
 
@@ -67,7 +72,7 @@
 
                     <p>
                         <label for="request-type">Type of Request:</label><br>
-                        <select id="request-type" name="request_type" required>
+                        <select id="request-type" name="request_type">
                             <option value="">-- Choose an option --</option>
                             <option value="pickup">Daily Item Pickup</option>
                             <option value="cake">Custom Cake Order</option>
@@ -78,12 +83,12 @@
 
                     <p>
                         <label for="pickup-date">Pickup Date:</label><br>
-                        <input type="date" id="pickup-date" name="pickup_date" required>
+                        <input type="date" id="pickup-date" name="pickup_date">
                     </p>
 
                     <p>
                         <label for="order-details">Items and Quantity:</label><br>
-                        <textarea id="order-details" name="order_details" rows="5" cols="40" required></textarea>
+                        <textarea id="order-details" name="order_details" rows="5" cols="40"></textarea>
                     </p>
 
                     <p>
@@ -95,7 +100,7 @@
                 <!-- Submit and reset controls -->
                 <p>
                     <button type="submit">Send Request</button>
-                    <button type="reset">Clear</button>
+                    <button type="reset" id="reset-btn">Clear</button>
                 </p>
             </form>
         </section>

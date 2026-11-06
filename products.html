@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>North Star Bakery | Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- Site header and navigation -->
@@ -24,60 +25,30 @@
         <!-- Single h1 for products page -->
         <h1>Our Bakery Menu</h1>
 
-        <!-- Category 1: Artisan Breads -->
+        <!-- Signature highlight section -->
         <section>
             <h2>Fresh Breads</h2>
-            
-            <!-- Figure element featuring signature loaf with caption -->
             <figure>
                 <img src="assets/images/bakery-signature-loaf_c.png" alt="A freshly baked round loaf of sourdough bread with scored crust">
                 <figcaption>Our Signature Sourdough Loaf, baked fresh daily.</figcaption>
             </figure>
-            
-            <h3>Signature Sourdough</h3>
-            <p>A classic round loaf with a crisp crust and a soft, tangy center.</p>
-            <p>Price: $8.50</p>
-
-            <h3>Seeded Rye Loaf</h3>
-            <p>Hearty rye bread mixed with sunflower and flax seeds.</p>
-            <p>Price: $9.00</p>
-
-            <h3>French Baguette</h3>
-            <p>Traditional long loaf with a golden crust, baked throughout the morning.</p>
-            <p>Price: $4.25</p>
-
-            <!-- Product category image -->
             <img src="assets/images/bakery-bread_c.png" alt="A display rack full of baked bread loaves">
         </section>
 
-        <!-- Category 2: Pastries -->
-        <section>
-            <h2>Pastries and Breakfast</h2>
-            
-            <h3>Butter Croissant</h3>
-            <p>Flaky pastry made with layered real butter.</p>
-            <p>Price: $4.50</p>
+        <!-- Interactive menu catalog section with client storage -->
+        <section id="menu-catalog-section">
+            <h2>Browse Offerings</h2>
+            <p>Filter our baked goods by category. Your selected preference is saved automatically for your next visit.</p>
 
-            <h3>Chocolate Croissant</h3>
-            <p>Our traditional flaky croissant filled with rich dark chocolate.</p>
-            <p>Price: $5.25</p>
+            <div id="filter-controls" class="filter-controls">
+                <button type="button" class="filter-btn active" data-category="all">All Items</button>
+                <button type="button" class="filter-btn" data-category="breads">Fresh Breads</button>
+                <button type="button" class="filter-btn" data-category="pastries">Pastries & Breakfast</button>
+                <button type="button" class="filter-btn" data-category="cakes">Cakes</button>
+            </div>
 
-            <h3>Fruit Galette</h3>
-            <p>Open pastry crust filled with seasonal baked fruit.</p>
-            <p>Price: $6.00</p>
-        </section>
-
-        <!-- Category 3: Cakes -->
-        <section>
-            <h2>Cakes</h2>
-            
-            <h3>Olive Oil Lemon Cake</h3>
-            <p>A moist loaf cake flavored with fresh lemon juice and olive oil.</p>
-            <p>Price: $18.00 whole loaf / $4.00 a slice</p>
-
-            <h3>Custom Event Cakes</h3>
-            <p>We make layered cakes for birthdays and events. Contact us ahead of time to discuss flavors.</p>
-            <p>Price: $45.00 to $85.00 depending on size</p>
+            <!-- DOM target for dynamic card generation -->
+            <div id="product-list" class="card-container"></div>
         </section>
     </main>
 
